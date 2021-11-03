@@ -1,10 +1,9 @@
 import React from "react";
 import {Helmet} from "react-helmet";
-import {Frontmatter} from "../types/Frontmatter";
 
-export default ({title, description, author, tags} : Frontmatter) => {
+export default ({title, description, author, tags}) => {
 
-    return(
+    return (
         <Helmet>
             <title>{title || 'UHB'}</title>
             <meta name={'description'} content={description || 'A blog about music and gear'}/>
