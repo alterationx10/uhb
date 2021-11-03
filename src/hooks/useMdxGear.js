@@ -1,10 +1,10 @@
 import {useStaticQuery, graphql} from "gatsby"
 
-export const useMdxGearMfr = () => {
+export const useMdxGear = () => {
 
     const {allMdx: {nodes} = []} = useStaticQuery(graphql`
-        query GearMfr {
-            allMdx(filter: {slug: {glob: "gear/*"}, frontmatter: {cat: {eq: "mfr"}}}) {
+        query Gear {
+            allMdx(filter: {slug: {glob: "gear/*"}, frontmatter: {cat: {eq: "gear"}}}) {
                 nodes {
                     id
                     slug
@@ -15,6 +15,5 @@ export const useMdxGearMfr = () => {
             }
         }
     `);
-    nodes.sort((a,b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
     return nodes;
 }
