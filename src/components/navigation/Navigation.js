@@ -1,7 +1,8 @@
 import React from "react";
 import {Container, Nav, Navbar} from "react-bootstrap";
 import NavMenu from "./NavMenu";
-export default (props) => {
+
+export default () => {
 
     return (
         <Navbar bg="light" expand="lg">
@@ -14,6 +15,8 @@ export default (props) => {
                         <NavMenu title={'Gear'} menu={'gear'}/>
                         <NavMenu title={'Manufacturer'} menu={'mfr'} subtitle={'Gear by Mfr'}/>
                         <NavMenu title={'Stores'} menu={'stores'}/>
+                        <Nav.Link href="/about">About</Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

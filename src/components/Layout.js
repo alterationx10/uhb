@@ -15,7 +15,7 @@ export default (props) => {
         <MDXProvider
         components = {shortcodes}>
             <main className={"d-flex flex-column min-vh-100"}>
-                <Meta frontmatter={frontmatter}/>
+                <Meta {...frontmatter}/>
                 <Navigation/>
                 <div>
                     {props.children}
