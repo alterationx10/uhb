@@ -8,6 +8,7 @@ export const useMdxPosts = () => {
                     id
                     slug
                     excerpt
+                    timeToRead
                     frontmatter {
                         title
                         tags

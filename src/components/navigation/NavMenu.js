@@ -1,7 +1,6 @@
 import React from "react";
 import {useMdxNamedMenu} from "../../hooks/useMdxMenu";
 import {NavDropdown} from "react-bootstrap";
-import {Link} from "gatsby";
 
 export default ({menu, title, subtitle}) => {
 
@@ -11,7 +10,7 @@ export default ({menu, title, subtitle}) => {
         if (subtitle) {
             return (
                 <>
-                    <NavDropdown.ItemText>Gear by Mfr</NavDropdown.ItemText>
+                    <NavDropdown.ItemText>{subtitle}</NavDropdown.ItemText>
                     <NavDropdown.Divider/>
                 </>
             )

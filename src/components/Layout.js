@@ -4,6 +4,8 @@ import Navigation from "./navigation/Navigation";
 import {MDXProvider} from "@mdx-js/react"
 import Meta from "./Meta";
 import PostList from "./posts/PostList";
+import {Container} from "react-bootstrap";
+import Footer from "./footer/Footer";
 
 export default (props) => {
     const shortcodes = {
@@ -17,9 +19,10 @@ export default (props) => {
             <main className={"d-flex flex-column min-vh-100"}>
                 <Meta {...frontmatter}/>
                 <Navigation/>
-                <div>
+                <Container className={"col-11 mx-auto flex-grow-1"} fluid={true}>
                     {props.children}
-                </div>
+                </Container>
+                <Footer/>
             </main>
         </MDXProvider>
     )
