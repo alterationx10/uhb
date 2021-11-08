@@ -1,10 +1,11 @@
 import React from "react";
 import {useMdxPosts} from "../../hooks/useMdxPosts";
-export default ({tag}) => {
+
+const PostList = ({tag}) => {
 
     const posts = useMdxPosts().filter(e => e?.frontmatter?.tags?.includes(tag));
 
-    return(
+    return (
         <>
             <div>
                 {
@@ -17,4 +18,5 @@ export default ({tag}) => {
             </div>
         </>
     )
-}
+};
+export default PostList;

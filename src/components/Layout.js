@@ -7,7 +7,7 @@ import PostList from "./posts/PostList";
 import {Container} from "react-bootstrap";
 import Footer from "./footer/Footer";
 
-export default (props) => {
+const Layout = (props) => {
     const shortcodes = {
         PostList,
         p: props => <p {...props} />
@@ -15,7 +15,7 @@ export default (props) => {
     const frontmatter = {...props?.pageContext?.frontmatter}
     return (
         <MDXProvider
-        components = {shortcodes}>
+            components={shortcodes}>
             <main className={"d-flex flex-column min-vh-100"}>
                 <Meta {...frontmatter}/>
                 <Navigation/>
@@ -26,4 +26,6 @@ export default (props) => {
             </main>
         </MDXProvider>
     )
-}
+};
+
+export default Layout;

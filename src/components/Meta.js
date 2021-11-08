@@ -1,7 +1,7 @@
 import React from "react";
 import {Helmet} from "react-helmet";
 
-export default ({title, description, author, tags}) => {
+const Meta = ({title, description, author, tags}) => {
 
     return (
         <Helmet>
@@ -11,4 +11,5 @@ export default ({title, description, author, tags}) => {
             <meta name={'keywords'} content={tags?.join(', ') || 'music, gear'}/>
         </Helmet>
     )
-}
+};
+export default Meta;

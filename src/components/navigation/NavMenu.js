@@ -2,7 +2,7 @@ import React from "react";
 import {useMdxNamedMenu} from "../../hooks/useMdxMenu";
 import {NavDropdown} from "react-bootstrap";
 
-export default ({menu, title, subtitle}) => {
+const NavMenu = ({menu, title, subtitle}) => {
 
     const data = useMdxNamedMenu(menu);
 
@@ -31,4 +31,6 @@ export default ({menu, title, subtitle}) => {
         </NavDropdown>
     )
 
-}
+};
+
+export default NavMenu;

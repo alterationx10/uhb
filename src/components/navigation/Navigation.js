@@ -2,13 +2,13 @@ import React from "react";
 import {Container, Nav, Navbar} from "react-bootstrap";
 import NavMenu from "./NavMenu";
 
-export default () => {
+const Navigation = () => {
 
     return (
         <Navbar bg="light" expand="lg" className={'mb-3'}>
             <Container>
                 <Navbar.Brand href="/">Ultra Heavy Beat</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
@@ -19,5 +19,7 @@ export default () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>    )
-}
+        </Navbar>)
+};
+
+export default Navigation;
