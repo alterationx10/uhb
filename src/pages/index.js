@@ -21,7 +21,7 @@ const Index = (props) => {
                         <Card.Body>
                             <Card.Title>{p.frontmatter.title}</Card.Title>
                             <Card.Text>
-                                {p.excerpt}
+                                {p.excerpt.replace(p.frontmatter.title, "")}
                             </Card.Text>
                             <Link to={'/' + p.slug} className={'btn btn-primary'}>Read</Link>
                         </Card.Body>
@@ -30,8 +30,8 @@ const Index = (props) => {
                                 <div>
                                     Tags:
                                     {
-                                        p.frontmatter.tags.map(t => (
-                                            <span> #{t} </span>
+                                        p.frontmatter.tags.map((t,i) => (
+                                            <span key={i}> #{t} </span>
                                         ))
                                     }
                                 </div>
