@@ -16,8 +16,8 @@ const Index = (props) => {
         <Stack gap={5}>
             {
                 posts.map(p => (
-                    <Card>
-                        <Card.Img className={'holderjs'} variant="top" src={"holder.js/100px180?theme=industrial&text=" + p.frontmatter.title} />
+                    <Card key={p.id}>
+                        <Card.Img className={'holderjs'} variant="top" src={`${p.frontmatter.banner}`} />
                         <Card.Body>
                             <Card.Title>{p.frontmatter.title}</Card.Title>
                             <Card.Text>

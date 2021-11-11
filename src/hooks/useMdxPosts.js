@@ -3,7 +3,7 @@ import {useStaticQuery, graphql} from "gatsby"
 export const useMdxPosts = () => {
     const {allMdx: {nodes} = []} = useStaticQuery(graphql`
         query SitePosts {
-            allMdx(filter: {slug: {glob: "posts/*"}}) {
+            allMdx(filter: {slug: {glob: "posts/**"}}) {
                 nodes {
                     id
                     slug
@@ -12,6 +12,8 @@ export const useMdxPosts = () => {
                     frontmatter {
                         title
                         tags
+                        banner
+                        created
                     }
                 }
             }
