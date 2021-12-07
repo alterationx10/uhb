@@ -12,8 +12,7 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <NavMenu title={'Gear'} menu={'gear'}/>
-                        <NavMenu title={'Manufacturer'} menu={'mfr'} subtitle={'Gear by Mfr'}/>
+                        <Nav.Link href="/gear">Gear</Nav.Link>
                         <NavMenu title={'Stores'} menu={'stores'}/>
                         <Nav.Link href="/about">About</Nav.Link>
                     </Nav>
