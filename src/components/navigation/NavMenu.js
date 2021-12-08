@@ -1,10 +1,10 @@
 import React from "react";
-import {useMdxNamedMenu} from "../../hooks/useMdxMenu";
+import {useMdxNamedCategory} from "../../hooks/useMdxMenu";
 import {NavDropdown} from "react-bootstrap";
 
 const NavMenu = ({menu, title, subtitle}) => {
 
-    const data = useMdxNamedMenu(menu);
+    const data = useMdxNamedCategory(menu);
 
     const maybeHeader = () => {
         if (subtitle) {

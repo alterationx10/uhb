@@ -1,11 +1,10 @@
 import React from "react";
-import {useMdxNamedMenu} from "../../hooks/useMdxMenu";
+import {useMdxNamedCategory} from "../../hooks/useMdxMenu";
 import {Container, Table} from "react-bootstrap";
-import {Link} from "gatsby";
 
 const Index = (props) => {
 
-    const data = useMdxNamedMenu('gear');
+    const data = useMdxNamedCategory('gear');
 
 
     return (

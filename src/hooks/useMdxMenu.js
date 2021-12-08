@@ -22,5 +22,5 @@ export const useMdxMenu = () => {
     return nodes;
 }
 
-export const useMdxNamedMenu = (m) => useMdxMenu().filter(e => e.frontmatter.category === m)
+export const useMdxNamedCategory = (m) => useMdxMenu().filter(e => e.frontmatter.category === m)
 export const useMdxGearForMfr = (m) => useMdxMenu().filter(e => e.frontmatter.category === 'gear' && e.frontmatter.tags.includes(m))
