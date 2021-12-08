@@ -6,6 +6,10 @@ const GearList = ({mfr}) => {
 
     const data = useMdxGearForMfr(mfr);
 
+    if (data.length === 0) {
+        return (<></>)
+    }
+
     return(
         <Container>
             <Table striped bordered hover>
