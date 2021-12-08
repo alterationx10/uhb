@@ -1,6 +1,5 @@
 import React from "react";
 import {Container, Nav, Navbar} from "react-bootstrap";
-import NavMenu from "./NavMenu";
 
 const Navigation = () => {
 

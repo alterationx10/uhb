@@ -21,3 +21,5 @@ export const useMdxPosts = () => {
     `);
     return nodes;
 }
+
+export const useMdxPostsForTag = (t) => useMdxPosts().filter(p => p.frontmatter.tags.includes(t))
