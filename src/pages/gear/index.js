@@ -23,12 +23,12 @@ const Index = (props) => {
                     data.map((g) => (
                         <tr key={g.id}>
                             <td>
-                                <Link to={'/' + g.slug}>
+                                <a href={'/' + g.slug}>
                                     {g.frontmatter.title}
-                                </Link>
+                                </a>
                             </td>
                             <td>
-
+                                {g.frontmatter.mfr}
                             </td>
                             <td>
                                 {

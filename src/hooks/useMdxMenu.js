@@ -12,6 +12,7 @@ export const useMdxMenu = () => {
                         title
                         menu
                         tags
+                        mfr
                     }
                 }
             }
