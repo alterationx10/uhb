@@ -1,5 +1,5 @@
 import React from "react";
-import {useMdxNamedCategory} from "../../hooks/useMdxMenu";
+import {useMdxNamedCategory} from "../../hooks/useMdxCategory";
 import {NavDropdown} from "react-bootstrap";
 
 const NavMenu = ({menu, title, subtitle}) => {

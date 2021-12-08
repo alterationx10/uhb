@@ -1,6 +1,6 @@
 import {useStaticQuery, graphql} from "gatsby"
 
-export const useMdxMenu = () => {
+export const useMdxCategory = () => {
 
     const {allMdx: {nodes} = []} = useStaticQuery(graphql`
         query MdxMenu {
@@ -22,5 +22,6 @@ export const useMdxMenu = () => {
     return nodes;
 }
 
-export const useMdxNamedCategory = (m) => useMdxMenu().filter(e => e.frontmatter.category === m)
-export const useMdxGearForMfr = (m) => useMdxMenu().filter(e => e.frontmatter.category === 'gear' && e.frontmatter.tags.includes(m))
+export const useMdxNamedCategory = (m) => useMdxCategory().filter(e => e.frontmatter.category === m)
+export const useMdxGearForMfr = (m) => useMdxCategory().filter(e => e.frontmatter.category === 'gear' && e.frontmatter.tags.includes(m))
+export const useMdxForTag = (m) => useMdxCategory().filter(e => e.frontmatter.tags.includes(m))

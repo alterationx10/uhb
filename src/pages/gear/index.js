@@ -1,5 +1,5 @@
 import React from "react";
-import {useMdxNamedCategory} from "../../hooks/useMdxMenu";
+import {useMdxNamedCategory} from "../../hooks/useMdxCategory";
 import {Container, Table} from "react-bootstrap";
 
 const Index = (props) => {

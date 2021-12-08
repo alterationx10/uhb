@@ -1,5 +1,5 @@
 import React from "react";
-import {useMdxGearForMfr} from "../../hooks/useMdxMenu";
+import {useMdxGearForMfr} from "../../hooks/useMdxCategory";
 import {Container, Table} from "react-bootstrap";
 
 const GearList = ({mfr}) => {
