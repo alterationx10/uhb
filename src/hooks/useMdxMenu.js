@@ -4,13 +4,13 @@ export const useMdxMenu = () => {
 
     const {allMdx: {nodes} = []} = useStaticQuery(graphql`
         query MdxMenu {
-            allMdx(filter: {frontmatter: {menu: {ne: null}}}) {
+            allMdx(filter: {frontmatter: {category: {ne: null}}}) {
                 nodes {
                     id
                     slug
                     frontmatter {
                         title
-                        menu
+                        category
                         tags
                         mfr
                     }
@@ -22,5 +22,5 @@ export const useMdxMenu = () => {
     return nodes;
 }
 
-export const useMdxNamedMenu = (m) => useMdxMenu().filter(e => e.frontmatter.menu === m)
-export const useMdxGearForMfr = (m) => useMdxMenu().filter(e => e.frontmatter.menu === 'gear' && e.frontmatter.tags.includes(m))
+export const useMdxNamedMenu = (m) => useMdxMenu().filter(e => e.frontmatter.category === m)
+export const useMdxGearForMfr = (m) => useMdxMenu().filter(e => e.frontmatter.category === 'gear' && e.frontmatter.tags.includes(m))
