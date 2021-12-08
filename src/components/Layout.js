@@ -6,10 +6,12 @@ import Meta from "./Meta";
 import PostList from "./posts/PostList";
 import {Container} from "react-bootstrap";
 import Footer from "./footer/Footer";
+import GearList from "./gear/GearList";
 
 const Layout = (props) => {
     const shortcodes = {
         PostList,
+        GearList,
         p: props => <p {...props} />
     }
     const frontmatter = {...props?.pageContext?.frontmatter}

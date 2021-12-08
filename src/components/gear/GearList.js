@@ -1,20 +1,17 @@
 import React from "react";
-import {useMdxNamedMenu} from "../../hooks/useMdxMenu";
+import {useMdxGearForMfr} from "../../hooks/useMdxMenu";
 import {Container, Table} from "react-bootstrap";
-import {Link} from "gatsby";
 
-const Index = (props) => {
+const GearList = ({mfr}) => {
 
-    const data = useMdxNamedMenu('gear');
+    const data = useMdxGearForMfr(mfr);
 
-
-    return (
+    return(
         <Container>
             <Table striped bordered hover>
                 <thead>
                 <tr>
                     <th>Gear</th>
-                    <th>Manufacturer</th>
                     <th>Tags</th>
                 </tr>
                 </thead>
@@ -25,11 +22,6 @@ const Index = (props) => {
                             <td>
                                 <a href={'/' + g.slug}>
                                     {g.frontmatter.title}
-                                </a>
-                            </td>
-                            <td>
-                                <a href={'/' + g.slug.split("/").splice(0,2).join("/")}>
-                                    {g.frontmatter.mfr}
                                 </a>
                             </td>
                             <td>
@@ -47,4 +39,5 @@ const Index = (props) => {
         </Container>
     )
 }
-export default Index;
+
+export default GearList;
